@@ -1,0 +1,21 @@
+{
+  "name": "cinemagic",
+  "version": "1.0.0",
+  "description": "CineMagic - MERN Stack Movie Ticket Booking Application",
+  "scripts": {
+    "install:all": "cd movie-book/backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd movie-book/backend && npm run dev",
+    "dev:frontend": "cd movie-book/frontend && npm run dev",
+    "start": "cd movie-book/backend && npm start",
+    "build": "cd movie-book/frontend && npm run build",
+    "seed": "cd movie-book/backend && npm run data:import",
+    "seed:destroy": "cd movie-book/backend && npm run data:destroy"
+  },
+  "keywords": ["mern", "movie", "booking"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

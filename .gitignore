@@ -1,3 +1,7 @@
+# Other projects in workspace
+inventory-management/
+Hotel-Management/
+
 # Dependencies
 node_modules/
 **/node_modules/

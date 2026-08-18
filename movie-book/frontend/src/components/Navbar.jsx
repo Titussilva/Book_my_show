@@ -78,7 +78,15 @@ const Navbar = () => {
                 </Link>
               )}
               <div className="relative group cursor-pointer flex items-center space-x-2">
-                <img src={user.avatar} alt="avatar" className="w-8 h-8 rounded-full border border-gray-600" />
+                {user.avatar && !user.avatar.includes('anonymous-avatar-icon') ? (
+                  <img src={user.avatar} alt="avatar" className="w-8 h-8 rounded-full border border-gray-600" onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} />
+                ) : null}
+                <div
+                  className="w-8 h-8 rounded-full border border-gray-600 bg-primary flex items-center justify-center text-white text-sm font-bold uppercase"
+                  style={{ display: (user.avatar && !user.avatar.includes('anonymous-avatar-icon')) ? 'none' : 'flex' }}
+                >
+                  {user.name?.charAt(0)}
+                </div>
                 <span className="text-sm font-medium">{user.name.split(' ')[0]}</span>
                 
                 {/* Dropdown */}

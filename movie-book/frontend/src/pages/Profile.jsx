@@ -33,7 +33,15 @@ const Profile = () => {
       {/* Profile Header */}
       <div className="glass-panel p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8 mb-10 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-accent"></div>
-        <img src={user.avatar} alt="Profile" className="w-32 h-32 rounded-full border-4 border-gray-800 shadow-xl" />
+        {user.avatar && !user.avatar.includes('anonymous-avatar-icon') ? (
+          <img src={user.avatar} alt="Profile" className="w-32 h-32 rounded-full border-4 border-gray-800 shadow-xl" onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} />
+        ) : null}
+        <div
+          className="w-32 h-32 rounded-full border-4 border-gray-800 shadow-xl bg-primary items-center justify-center text-white text-5xl font-bold uppercase"
+          style={{ display: (user.avatar && !user.avatar.includes('anonymous-avatar-icon')) ? 'none' : 'flex' }}
+        >
+          {user.name?.charAt(0)}
+        </div>
         <div>
           <h1 className="text-3xl font-bold mb-2">{user.name}</h1>
           <p className="text-gray-400">{user.email}</p>

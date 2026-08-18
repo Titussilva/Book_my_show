@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../utils/axiosInstance';
 import { motion } from 'framer-motion';
 import MovieCard from '../components/MovieCard';
 

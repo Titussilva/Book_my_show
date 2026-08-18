@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '../utils/axiosInstance';
 import { AuthContext } from '../context/AuthContext';
 import { motion } from 'framer-motion';
 

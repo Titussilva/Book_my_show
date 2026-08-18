@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '../utils/axiosInstance';
 import { motion } from 'framer-motion';
 import { FiClock, FiStar, FiCalendar, FiPlayCircle } from 'react-icons/fi';
 

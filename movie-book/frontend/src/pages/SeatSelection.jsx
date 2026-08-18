@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '../utils/axiosInstance';
 import { motion } from 'framer-motion';
 import { AuthContext } from '../context/AuthContext';
 import { toast } from 'react-hot-toast';

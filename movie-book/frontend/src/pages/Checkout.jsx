@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
-import axios from 'axios';
+import axios from '../utils/axiosInstance';
 import { toast } from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiCheckCircle, FiShield, FiLock, FiArrowRight } from 'react-icons/fi';
